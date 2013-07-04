@@ -52,7 +52,7 @@ template "/etc/td-agent/td-agent.conf" do
 end
 
 package "td-agent" do
-  options "-f --force-yes"
+  #options "-f --force-yes"
   action :upgrade
 end
 
