@@ -8,14 +8,14 @@
 # @see http://docs.fluentd.org/articles/http-to-td
 #
 # This section matches events whose tag is td.DATABASE.TABLE
-<match td.*.*>
-  type tdlog
-  apikey <%= node['td_agent']['api_key'] %>
-
-  auto_create_table
-  buffer_type file
-  buffer_path /var/log/td-agent/buffer/td
-</match>
+#<match td.*.*>
+#  type tdlog
+#  #apikey <%= node['td_agent']['api_key'] %>
+#
+#  auto_create_table
+#  buffer_type file
+#  buffer_path /var/log/td-agent/buffer/td
+#</match>
 
 ## match tag=debug.** and dump to console
 <match debug.**>
