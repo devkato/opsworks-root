@@ -117,9 +117,9 @@ def repo_config
                 :metadata_expire => new_resource.metadata_expire,
                 :type => new_resource.type
               })
-    if new_resource.make_cache
-      notifies :run, "execute[yum-makecache]", :immediately
-      notifies :create, "ruby_block[reload-internal-yum-cache]", :immediately
-    end
+    #if new_resource.make_cache
+    #  notifies :run, "execute[yum-makecache]", :immediately
+    #  notifies :create, "ruby_block[reload-internal-yum-cache]", :immediately
+    #end
   end
 end
